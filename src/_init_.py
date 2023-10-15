@@ -14,24 +14,14 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import sys
-from PyQt6.QtWidgets import QApplication, QMainWindow, QTextEdit, QToolBar, QStatusBar
-from PyQt6.QtGui import QIcon, QAction
-
+from PyQt6.QtWidgets import QApplication, QMainWindow
 
 class MainWindow(QMainWindow):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
         self.setWindowTitle('pygprix')
-        # self.setWindowIcon(QIcon('./assets/editor.png'))
         self.setGeometry(100, 100, 500, 300)
-
-        self.text_edit = QTextEdit(self)
-        self.setCentralWidget(self.text_edit)
-
-        # setting menu
-        menu_bar = self.menuBar()
-        help_menu = menu_bar.addMenu('&Help')
         self.show()
 
 
