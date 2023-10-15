@@ -17,15 +17,15 @@ import sys
 from PyQt6.QtWidgets import QApplication, QMainWindow
 
 class MainWindow(QMainWindow):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(self):
+        super().__init__()
 
-        self.setWindowTitle('pygprix')
+        self.setWindowTitle('PyGPrix')
         self.setGeometry(100, 100, 500, 300)
         self.show()
 
-
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    window = MainWindow()
-    sys.exit(app.exec())
+# Launch app
+app = QApplication(sys.argv)
+window = MainWindow()
+window.show()
+app.exec()
