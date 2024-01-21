@@ -1,3 +1,0 @@
-# GUI requeriments
-PyQt6
-PySide6

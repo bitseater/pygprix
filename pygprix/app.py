@@ -21,7 +21,12 @@ class MainWindow(QMainWindow):
         super().__init__()
 
         self.setWindowTitle('PyGPrix')
-        self.setGeometry(100, 100, 500, 300)
+        self.setGeometry (250,250,800,600)
+
+        # setting menu
+        menu_bar = self.menuBar()
+        menu_bar.addAction ('Exit', self.close)
+
         self.show()
 
 # Launch app
