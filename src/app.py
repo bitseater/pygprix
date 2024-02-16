@@ -14,18 +14,22 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import sys
-from PyQt6.QtWidgets import QApplication, QMainWindow
+from PyQt6.QtWidgets import *
+from PyQt6.QtCore import Qt
+from PyQt6.QtGui import *
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
         self.setWindowTitle('PyGPrix')
-        self.setGeometry (250,250,800,600)
-
-        # setting menu
-        menu_bar = self.menuBar()
-        menu_bar.addAction ('Exit', self.close)
+        self.setGeometry (200,150,800,600)
+        widget = QWidget()
+        self.setCentralWidget(widget)
+        layout = QVBoxLayout(widget)
+        self.text = QLabel("Welcome to PyGPrix")
+        self.text.setStyleSheet("font-weight: bold; font-size:14pt; color: red")
+        layout.addWidget(self.text, alignment=Qt.AlignmentFlag.AlignCenter)
 
         self.show()
 
