@@ -1,5 +1,6 @@
-#!/usr/bin/env python
-
+#
+# Copyright (c) Carlos Suárez (https://gitlab.com/bitseater)
+#
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
@@ -12,6 +13,7 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
 
 import sys
 from PyQt6.QtWidgets import *
@@ -28,13 +30,14 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(widget)
         layout = QVBoxLayout(widget)
         self.text = QLabel("Welcome to PyGPrix")
-        self.text.setStyleSheet("font-weight: bold; font-size:14pt; color: red")
+        self.text.setStyleSheet("font-weight: bold; font-size:16pt; color: red")
         layout.addWidget(self.text, alignment=Qt.AlignmentFlag.AlignCenter)
 
         self.show()
 
 # Launch app
-app = QApplication(sys.argv)
-window = MainWindow()
-window.show()
-app.exec()
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    app.exec()
